@@ -27,6 +27,9 @@ namespace Kencoder
 
 		public void SetFuel(float fuel) {
 			if(slider != null) {
+				if(fuel < 0) {
+					fuel = 0;
+				}
 				slider.value = fuel;
 			}
 		}

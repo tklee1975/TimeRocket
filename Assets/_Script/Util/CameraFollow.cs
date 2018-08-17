@@ -12,17 +12,38 @@ public class CameraFollow : MonoBehaviour
     public float bottomBound = 0;
     public float leftBound = -3;
     public float rightBound = 3;
+
+    protected bool mEnable = false;
+    protected Vector3 mOriginPosition;
+
+    /// <summary>
+    /// Awake is called when the script instance is being loaded.
+    /// </summary>
+    void Awake()
+    {
+        mOriginPosition = transform.position;
+    }
     
 
     void Start ()
     {
-        //Record the camera's initial position offset from the target.
-		//The camer will then maintain this offset
-        offset = transform.position - target.position;
+    }
+
+    public void ResetOrigin() {
+        transform.position = mOriginPosition;   
+    }
+
+    public void SetEnable(bool flag) {
+        mEnable = flag;
     }
 		
     void FixedUpdate ()
     {
+        if(target == null) {
+            return;
+        }
+    
+
     	//Figure out where the camera wants to be by adding the offset to the target's current
 		//position
     	Vector3 targetCamPos = target.position;

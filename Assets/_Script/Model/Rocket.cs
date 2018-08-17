@@ -68,6 +68,10 @@ public class Rocket : MonoBehaviour {
 		
 	}
 
+	public bool IsInSpace() {
+		return transform.position.y >= moveBound;
+	}
+
 	void MoveUp() {
 		float moveDelta = moveSpeed * Time.deltaTime;
 		Vector3 pos = transform.position;

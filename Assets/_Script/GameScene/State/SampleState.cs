@@ -4,10 +4,17 @@ using UnityEngine;
 
 namespace Kencoder
 {
-	public class RocketControlView : BaseUI {
-		public TimeCounterUI timeCounter;
-		public BoosterView boosterView;
-		public FuelView fuelView;
+	public class SampleState : BaseGameState {
+
+        #region manadatory GameState implementation
+        public override void OnEnter () {
+		}
+		public override void OnExit(){
+		}
+		public override void OnUpdate(){
+		}
+
+		#endregion
 
 		// Use this for initialization
 		void Start () {
@@ -19,5 +26,4 @@ namespace Kencoder
 			
 		}
 	}
-
 }

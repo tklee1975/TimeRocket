@@ -246,6 +246,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewController: {fileID: 0}
+  keyEventText: {fileID: 114284119787874102}
+  timeCounter: {fileID: 114563364830193494}
+  playButton: {fileID: 114282575759569700}
 --- !u!114 &114137209989186594
 MonoBehaviour:
   m_ObjectHideFlags: 1

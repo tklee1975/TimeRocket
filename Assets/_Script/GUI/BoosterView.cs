@@ -15,7 +15,7 @@ namespace Kencoder
 		protected bool mSwing = false;
 		protected int mSwingDir = 1;
 
-
+		public Button boosterButton;
 
 		// Use this for initialization
 		void Start () {
@@ -28,6 +28,14 @@ namespace Kencoder
 
 		public void StopSwing() {
 			mSwing = false;
+		}
+
+		public void DisableBooster() {
+			boosterButton.enabled = false;
+		}
+
+		public void EnableBooster() {
+			boosterButton.enabled = true;
 		}
 
 		public void Reset() {
@@ -56,24 +64,24 @@ namespace Kencoder
 			}
 		}
 
-		public int energyLevel {
-			get {
-				float energyValue = energySlider.value;
-				if(energyValue > energyRange2) {
-					return 2;
-				} else if(energyValue > energyRange1) {
-					return 1;
-				} else {
-					return 0;
-				}
-				//fore
+		public int GetEnergyLevel(float energyValue) {
+			if(energyValue > energyRange2) {
+				return 2;
+			} else if(energyValue > energyRange1) {
+				return 1;
+			} else {
+				return 0;
 			}
 		}
 
 		public void OnBoostClicked() {
 			mSwing = false;
+
+			float value = energySlider.value;
+			//energySlider.value = 0;
+
 			if(onBoostCallback != null) {
-				onBoostCallback();
+				onBoostCallback(GetEnergyLevel(value));
 			}
 		}
 
@@ -87,8 +95,9 @@ namespace Kencoder
 
 		// callback
 		public delegate void Callback();
+		public delegate void BoostCallback(int energLevel);
 
-		public Callback onBoostCallback = null;
+		public BoostCallback onBoostCallback = null;
 		public Callback onLandCallback = null;
 	}
 }

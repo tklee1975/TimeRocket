@@ -822,6 +822,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewController: {fileID: 0}
+  timeCounter: {fileID: 114235860712191422}
+  boosterView: {fileID: 114377872559553736}
+  fuelView: {fileID: 114704509847999496}
 --- !u!114 &114299388893733446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -951,6 +954,7 @@ MonoBehaviour:
   swingSpeed: 2
   energyRange2: 90
   energyRange1: 60
+  boosterButton: {fileID: 114091063767974454}
 --- !u!114 &114408213165487876
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1222,7 +1226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 114026362358590492}
-  fuelCountText: {fileID: 114737312167681440}
+  fuelCountText: {fileID: 114985661344457112}
 --- !u!114 &114737312167681440
 MonoBehaviour:
   m_ObjectHideFlags: 1

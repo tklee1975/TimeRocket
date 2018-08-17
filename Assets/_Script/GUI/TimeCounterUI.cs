@@ -12,10 +12,10 @@ namespace Kencoder
 
 		// Use this for initialization
 		void Start () {
-			UpdateTimeGame();
+			UpdateTime();
 		}
 
-		public void UpdateTimeGame()
+		public void UpdateTime()
 		{
 			if(gameTime == null) {
 				return;

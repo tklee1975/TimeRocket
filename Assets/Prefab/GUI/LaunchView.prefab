@@ -446,6 +446,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewController: {fileID: 0}
+  countDownText: {fileID: 114000281743640438}
+  timeCounter: {fileID: 114027818301243296}
+  launchButton: {fileID: 114007145027395522}
 --- !u!114 &114832824061071384
 MonoBehaviour:
   m_ObjectHideFlags: 1

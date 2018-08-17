@@ -31,10 +31,10 @@ public class TimeCounterTest : BaseTest {
 		gameTime = new GameTime();
 		gameTime.SetYearDay(2018, 123);	
 		timeCounterUI.gameTime = gameTime;
-		timeCounterUI.UpdateTimeGame();
+		timeCounterUI.UpdateTime();
 
-		boosterView.onBoostCallback = () => {
-			Debug.Log("On Boost Called. energyLevel=" + boosterView.energyLevel);
+		boosterView.onBoostCallback = (int energyLevel) => {
+			Debug.Log("On Boost Called. energyLevel=" + energyLevel);
 		};
 
 		boosterView.onLandCallback = () => {
@@ -54,7 +54,7 @@ public class TimeCounterTest : BaseTest {
 	}
 
 	void UpdateUI() {
-		timeCounterUI.UpdateTimeGame();
+		timeCounterUI.UpdateTime();
 	}
 
 	[Test]
