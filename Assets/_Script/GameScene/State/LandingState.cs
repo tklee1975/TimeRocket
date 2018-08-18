@@ -9,6 +9,7 @@ namespace Kencoder
 
         #region manadatory GameState implementation
         public override void OnEnter () {
+			GameScene.Instance.SetWorldModelForTime();
 			landingView = GameViewController.Instance.landingView;
 
 			GameScene.Instance.StopTimeTravel();

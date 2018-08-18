@@ -130,9 +130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zPosition: -5
   initialPosition: -3.5
-  moveSpeed: 5
-  maxMoveSpeed: 10
-  acceleration: 10
+  moveSpeed: 30
+  maxMoveSpeed: 80
+  acceleration: 100
   moveBound: 50
   landingStartPosition: {x: -1, y: 3, z: 0}
   landingDuration: 3

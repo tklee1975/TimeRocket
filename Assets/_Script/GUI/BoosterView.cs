@@ -19,7 +19,7 @@ namespace Kencoder
 
 		// Use this for initialization
 		void Start () {
-			mSwing = false;
+			//mSwing = false;
 		}
 
 		public void StartSwing() {

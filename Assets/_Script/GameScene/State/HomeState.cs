@@ -8,6 +8,7 @@ namespace Kencoder
 
         #region manadatory GameState implementation
         public override void OnEnter () {
+			GameScene.Instance.ResetWorldModel();
 			GameScene.Instance.ResetCamera();
 			GameScene.Instance.SetCameraFollow(false);
 			GameViewController.Instance.ShowHomeView();

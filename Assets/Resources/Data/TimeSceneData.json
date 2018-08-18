@@ -1,0 +1,11 @@
+[{"startYear":1999,"isRange":1,"building":"city_02","subject":"na"},
+    {"startYear":1951,"isRange":1,"building":"city_01","subject":"na"},
+    {"startYear":1946,"isRange":1,"building":"modern_01","subject":"na"},
+    {"startYear":1941,"isRange":1,"building":"modern_01","subject":"war_01"},
+    {"startYear":1900,"isRange":1,"building":"modern_01","subject":"na"},
+    {"startYear":1830,"isRange":1,"building":"factory_01","subject":"na"},
+    {"startYear":1517,"isRange":1,"building":"town_01","subject":"na"},
+    {"startYear":1488,"isRange":1,"building":"port_01","subject":"na"},
+    {"startYear":1301,"isRange":1,"building":"castle_01","subject":"na"},
+    {"startYear":476,"isRange":1,"building":"church_01","subject":"na"},
+    {"startYear":0,"isRange":1,"building":"rome_01","subject":"na"}]

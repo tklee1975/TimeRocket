@@ -9,6 +9,7 @@ namespace Kencoder
 		public GameTime gameTime;
 		public Rocket rocket;
 		public CameraFollow cameraLogic;
+		public WorldModel worldModel;
 
 		public float rocketSpeed = 100;		// day per second
 
@@ -43,6 +44,8 @@ namespace Kencoder
 		}
 
 		void Start () {
+			MainGameManager.Instance.Startup();
+
 			gameTime = new GameTime();
 
 			SetupUI();
@@ -141,5 +144,21 @@ namespace Kencoder
 			float dayDelta = Time.deltaTime * rocketSpeed;
 			gameTime.ReduceTime(dayDelta);
 		}
+
+		#region World Model 
+		public void ResetWorldModel() {
+			worldModel.SetWorld("launch_area");
+		}
+
+		public void SetWorldModelForTime() {
+			worldModel.SetWorldForYear(gameTime.year);
+		}
+
+		public void SetTestWorldModel() {
+			worldModel.SetWorld("city_01", "people_01");
+		}
+
+
+		#endregion
 	}
 }

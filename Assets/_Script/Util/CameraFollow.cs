@@ -29,6 +29,8 @@ public class CameraFollow : MonoBehaviour
     {
     }
 
+    
+
     public void ResetOrigin() {
         transform.position = mOriginPosition;   
     }
