@@ -17,6 +17,14 @@ namespace Kencoder
 			
 		}
 
+		public void SetWorldForID(int worldID) {
+			TimeSceneData data = MainGameManager.Instance.GetSceneDataForID(worldID);
+			if(data != null) {
+				Debug.Log("SetWorld: building=" + data.building + " sub=" + data.subject);
+				SetWorld(data.building, data.subject);
+			}
+		}
+
 		public void SetWorldForYear(int year) {
 			TimeSceneData data = MainGameManager.Instance.GetSceneDataForYear(year);
 			if(data != null) {

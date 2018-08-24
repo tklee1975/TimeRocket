@@ -26,6 +26,8 @@ namespace Kencoder
 				StartLanding();
 			};
 
+			GameScene.Instance.SetRocketSpeedByEnergy(0);
+			rocketView.fuelView.SetEnergy(0);
 			GameViewController.Instance.ShowRocketView();
 
 			Setup();
@@ -71,6 +73,7 @@ namespace Kencoder
 		}
 
 		void OnBoosting(int boostValue) {
+			rocketView.fuelView.SetEnergy(boostValue);
 			GameScene.Instance.SetRocketSpeedByEnergy(boostValue);
 
 			if(fuelCount > 1) {

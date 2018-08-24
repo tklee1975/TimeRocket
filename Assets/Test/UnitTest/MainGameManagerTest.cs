@@ -22,8 +22,17 @@ public class MainGameManagerTest : BaseTest {
 	}
 
 	[Test]
-	public void test2()
+	public void TestEvent()
 	{
-		Debug.Log("###### TEST 2 ######");
+		for(int year=1; year <= 2018; year += 2) {
+			string eventName = MainGameManager.Instance.GetTimeEventName(year);
+			if(eventName != "") {
+				Debug.Log("year=" + year + " event=" + eventName);
+			}
+		}
+		for(int year=1938; year<=1944; year++) {
+			string eventName = MainGameManager.Instance.GetTimeEventName(year);
+			Debug.Log("year=" + year + " event=" + eventName);
+		}
 	}
 }

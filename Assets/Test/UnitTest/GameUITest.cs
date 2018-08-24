@@ -6,6 +6,9 @@ using SimpleTDD;
 using Kencoder;
 
 public class GameUITest : BaseTest {		
+	public FuelView fuelView;
+	public int energy = 0;
+
 	[Test]
 	public void ShowHomeView()
 	{
@@ -34,6 +37,11 @@ public class GameUITest : BaseTest {
 	public void ShowLandingView()
 	{
 		GameViewController.Instance.ShowLandingView();
+	}
+
+	[Test]
+	public void SetEnergy() {
+		fuelView.SetEnergy(energy);
 	}
 
 }

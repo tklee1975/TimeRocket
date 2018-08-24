@@ -15,6 +15,10 @@ namespace Kencoder
 		void Update () {
 			
 		}
+
+		public void OnCollectionClicked() {
+			SceneHelper.GotoCollectionScene();
+		}
 	}
 
 }

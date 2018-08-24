@@ -130,7 +130,7 @@ namespace Kencoder
 		public void SetRocketSpeedByEnergy(int energyLevel) {
 			float speed = 300;
 			if(energyLevel == 2) {
-				speed = 30000;
+				speed = 40000;
 			} else if(energyLevel == 1) {
 				speed = 3000;
 			}
@@ -143,6 +143,17 @@ namespace Kencoder
 		void UpdateGameTime(){
 			float dayDelta = Time.deltaTime * rocketSpeed;
 			gameTime.ReduceTime(dayDelta);
+		}
+
+		public void UpdateUnlockData() {
+			int landedYear = gameTime.year;
+
+			MainGameManager.Instance.AddUnlockEvent(landedYear);
+
+			TimeSceneData data = MainGameManager.Instance.GetSceneDataForYear(landedYear);
+			if(data != null) {
+				MainGameManager.Instance.saveData.AddUnlockScene(data.worldID);
+			}
 		}
 
 		#region World Model 

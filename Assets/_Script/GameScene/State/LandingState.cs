@@ -9,6 +9,7 @@ namespace Kencoder
 
         #region manadatory GameState implementation
         public override void OnEnter () {
+			GameScene.Instance.UpdateUnlockData();
 			GameScene.Instance.SetWorldModelForTime();
 			landingView = GameViewController.Instance.landingView;
 
@@ -28,7 +29,10 @@ namespace Kencoder
 
 		#endregion
 
+
 		void SetupUI() {
+			
+
 			landingView.SetKeyEvent("");
 			landingView.SetPlayButtonVisible(false);
 		}
@@ -47,7 +51,13 @@ namespace Kencoder
 
 		void OnRocketLanded()
 		{
-			landingView.SetKeyEvent("Something happened in History");
+			int year = GameScene.Instance.gameTime.year;
+			string eventName = MainGameManager.Instance.GetTimeEventName(year);
+			if(eventName == "") {
+				eventName = "No news may be a Good news!";
+			}
+
+			landingView.SetKeyEvent(eventName);
 			landingView.SetPlayButtonVisible(true);
 		}
 		
